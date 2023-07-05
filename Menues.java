@@ -5,6 +5,7 @@ public class Menues {
             + "5. Listar Equipos por zona. \n" + "\n" + "0. Salir";
 
     public static void muestraMenuGeneral() {
+
         String[] lineas = menu_general.split("\n");
         int longitudLinea = 0;
 
@@ -27,6 +28,7 @@ public class Menues {
 
         // Imprimir el marco inferior
         System.out.println("*".repeat(longitudLinea + 4));
+
     }
 
 }
