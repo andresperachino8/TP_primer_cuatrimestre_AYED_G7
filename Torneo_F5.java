@@ -5,13 +5,65 @@ public class Torneo_F5 {
     static int contador = 0;
 
     public static void main(String[] args) throws Exception {
-        int opc = 110;
         Scanner sc = new Scanner(System.in);
 
-        Equipo equipo = new Equipo();
-        equipo.altaEquipo();
+        Equipo e = new Equipo();
+        Jugador j = new Jugador();
+        Resultados r = new Resultados();
 
-        equipo.muestraEquipos(equipo.equipos);
+        int opcion = 0;
+        Menues.muestraMenuGeneral();
+        System.out.println("Seleccione una opción: ");
+        opcion = Integer.parseInt(sc.nextLine());
+
+        while (opcion != 6) {
+
+            switch (opcion) {
+                case 1:
+                    e.altaEquipo();
+                    break;
+                case 2:
+                    j.altaJugador();
+                    break;
+                case 3:
+                    e.muestraEquipos(e.equipos);
+                    break;
+                case 4:
+                    j.muestraJugadores(j.jugadores);
+                    break;
+                case 5:
+                    r.simulaResultados(e.equipos, j.jugadores);
+                    break;
+                case 6:
+                    System.out.println("Saliendo del programa...");
+                    break;
+                default:
+                    System.out.println("Opción inválida. Por favor, seleccione una opción válida.");
+                    break;
+            }
+            Menues.muestraMenuGeneral();
+            System.out.println("Seleccione una opción: ");
+            opcion = Integer.parseInt(sc.nextLine());
+
+        }
+        sc.close();
+
+        // PRUEBAS ALTA EQUIPO
+
+        /*
+         * Equipo equipo = new Equipo();
+         * equipo.altaEquipo();
+         * 
+         * equipo.muestraEquipos(equipo.equipos);
+         */
+
+        // PRUEBAS ALTA JUGADOR
+        /*
+         * Jugador j = new Jugador();
+         * j.altaJugador();
+         * 
+         * j.muestraJugadores(j.jugadores);
+         */
 
         /*
          * // Menu general
@@ -52,6 +104,5 @@ public class Torneo_F5 {
          * System.out.println("------------------------------------");
          * }
          */
-        sc.close();
     }
 }

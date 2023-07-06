@@ -1,8 +1,8 @@
 public class Menues {
     public static String menu_general = "Bienvenido al Torneo de Fútbol 5 \n" + "\n" + "Menú de opciones: \n" + "\n"
-            + "Seleccione una opción: " + "\n" + "1. Nuevo Equipo. \n" + "2. Nuevo Jugador. \n"
+            + "Seleccione una opción: " + "\n" + "1. Carga de Equipos. \n" + "2. Carga de Jugadores. \n"
             + "3. Listar Equipos. \n" + "4. Listar Jugadores. \n"
-            + "5. Listar Equipos por zona. \n" + "\n" + "0. Salir";
+            + "5. Simular resultados. \n" + "\n" + "6. Salir";
 
     public static void muestraMenuGeneral() {
 

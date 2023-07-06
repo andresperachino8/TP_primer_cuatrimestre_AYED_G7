@@ -6,7 +6,7 @@ public class Equipo {
     int cant_comodines;
     String zona; // (A o B)
 
-    int nequipos = 4;
+    int nequipos = 8;
     Equipo equipos[] = new Equipo[nequipos];
 
     // Método constructor
@@ -30,38 +30,38 @@ public class Equipo {
 
         Scanner sc = new Scanner(System.in);
 
-        while (contador < 4) {
-            if (contador == 4) {
-                System.out.println("CUPO DE EQUIPOS COMPLETO...");
-                break;
-            }
+        while (contador < 8) {
 
-            System.out.println("Ingrese el nombre del equipo " + (contador + 1) + ": ");
+            System.out.println("-----INGRESO NUEVO EQUIPO-----");
+
+            System.out.println("Ingrese el nombre del equipo [" + (contador + 1) + "/8] ");
             nombre = sc.nextLine();
 
             System.out.println(
-                    "Ingrese la cantidad de jugadores del equipo " + (contador + 1) + " (Mínimo 9 - Máximo 14)");
+                    "Ingrese la cantidad de jugadores del equipo [" + (contador + 1) + "/8] (Mínimo 9 - Máximo 14)");
             cant_jugadores = Integer.parseInt(sc.nextLine());
 
             // Valida cantidad minima y maxima
             while (cant_jugadores < 9 || cant_jugadores > 14) {
                 System.out.println("Cantidad incorrecta. Debe ingresar un Minimo de 9 jugadores y un maximo de 14");
                 System.out.println(
-                        "Ingrese la cantidad de jugadores del equipo " + (contador + 1) + ": (Mínimo 9 - Máximo 14)");
+                        "Ingrese la cantidad de jugadores del equipo [" + (contador + 1)
+                                + "/8] (Mínimo 9 - Máximo 14)");
                 cant_jugadores = Integer.parseInt(sc.nextLine());
             }
 
             System.out
-                    .println("Ingrese la cantidad de comodines que posee el equipo " + (contador + 1) + ": (Hasta 2)");
+                    .println("Ingrese la cantidad de comodines que posee el equipo [" + (contador + 1)
+                            + "/8]: (Hasta 2)");
             cant_comodines = Integer.parseInt(sc.nextLine());
             // Valida cantidad de comodines admitida
             while (cant_comodines < 0 || cant_comodines > 2) {
                 System.out.println("Cantidad incorrecta. Debe ingresar un maximo de 2");
-                System.out.println("Ingrese la cantidad de comodines del equipo " + (contador + 1) + ": (Máximo 2)");
+                System.out.println("Ingrese la cantidad de comodines del equipo [" + (contador + 1) + "/8] (Máximo 2)");
                 cant_comodines = Integer.parseInt(sc.nextLine());
             }
 
-            System.out.println("Ingrese la zona del equipo " + (contador + 1) + ": (A o B)");
+            System.out.println("Ingrese la zona del equipo [" + (contador + 1) + "/8] (A o B)");
             zona = sc.nextLine();
 
             Equipo ne = new Equipo(nombre, cant_jugadores, cant_comodines, zona);
@@ -69,8 +69,6 @@ public class Equipo {
 
             contador++;
         }
-
-        sc.close();
     }
 
     public void muestraEquipos(Equipo[] e) {
