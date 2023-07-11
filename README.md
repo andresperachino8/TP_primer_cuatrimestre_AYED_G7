@@ -1,4 +1,5 @@
-Enunciado 2: Torneo Fútbol 5
+Enunciado 2: 
+Torneo Fútbol 5
 
 Un club decide realizar un torneo de fútbol 5 a continuación, se expone el reglamento de este torneo.
 
@@ -37,3 +38,10 @@ Puntajes:
 4. Walkover: en caso de no presentarse un equipo, al contrario se le asignarán 3 puntos y 3 goles a favor, como si lo
 hubiese ganado. Al que faltase se lo penalizará con 3 goles en contra. Aún habiendo faltado a uno o más
 partidos, de presentarse, el equipo podrá jugar los partidos restantes de la zona.
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Integrantes Grupo 7:
+- Perachino, Andrés
+- Melian, Quimey
+- Denari, Joaquín
