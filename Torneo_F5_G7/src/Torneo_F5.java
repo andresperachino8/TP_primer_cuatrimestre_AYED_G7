@@ -16,25 +16,30 @@ public class Torneo_F5 {
         System.out.println("Seleccione una opción: ");
         opcion = Integer.parseInt(sc.nextLine());
 
-        while (opcion != 6) {
+        // while (opcion != 6) {
+        while (opcion != 5) {
 
             switch (opcion) {
                 case 1:
                     e.altaEquipo();
                     break;
+                // case 2:
+                // j.altaJugador();
+                // break;
+                // case 3:
                 case 2:
-                    j.altaJugador();
-                    break;
-                case 3:
                     e.muestraEquipos(e.equipos);
                     break;
+                case 3:
+                    // j.muestraJugadores(j.jugadores);
+                    e.muestraJugadores(e.equipos);
+                    break;
                 case 4:
-                    j.muestraJugadores(j.jugadores);
+                    // r.simulaResultados(e.equipos, j.jugadores);
+                    r.simulaResultados(e.equipos, e.jugadores);
                     break;
+                // case 6:
                 case 5:
-                    r.simulaResultados(e.equipos, j.jugadores);
-                    break;
-                case 6:
                     System.out.println("Saliendo del programa...");
                     break;
                 default:

@@ -7,7 +7,7 @@ public class Equipo {
     String zona; // (A o B)
     Jugador[] jugadores;
 
-    int nequipos = 8;
+    int nequipos = 2;
     Equipo equipos[] = new Equipo[nequipos];
 
     // Método constructor
@@ -31,9 +31,11 @@ public class Equipo {
 
         int contador = 0;
 
+        Jugador j = new Jugador();
+
         Scanner sc = new Scanner(System.in);
 
-        while (contador < 8) {
+        while (contador < 2) {
 
             System.out.println("-----INGRESO NUEVO EQUIPO-----");
 
@@ -45,7 +47,7 @@ public class Equipo {
             cant_jugadores = Integer.parseInt(sc.nextLine());
 
             // Valida cantidad minima y maxima
-            while (cant_jugadores < 9 || cant_jugadores > 14) {
+            while (cant_jugadores < 1 || cant_jugadores > 14) {
                 System.out.println("Cantidad incorrecta. Debe ingresar un Minimo de 9 jugadores y un maximo de 14");
                 System.out.println(
                         "Ingrese la cantidad de jugadores del equipo [" + (contador + 1)
@@ -68,6 +70,14 @@ public class Equipo {
             zona = sc.nextLine();
 
             Equipo ne = new Equipo(nombre, cant_jugadores, cant_comodines, zona);
+
+            System.out.println(
+                    "Ingrese los " + cant_jugadores + " jugadores del equipo ");
+            for (int i = 0; i < cant_jugadores; i++) {
+                System.out.println("Jugador " + (i + 1) + "/" + cant_jugadores);
+                ne.jugadores[i] = j.altaJugador(i, cant_jugadores);
+            }
+
             equipos[contador] = ne;
 
             contador++;
@@ -88,4 +98,68 @@ public class Equipo {
         }
 
     }
+
+    /*
+     * public void muestraJugadores(Equipo[] e) {
+     * System.out.println("Jugadores cargados: ");
+     * 
+     * // Encabezado de la grilla
+     * System.out.println(
+     * "+------------+------------+----------+-----------+--------+---------------+-------------------+--------------+--------------+"
+     * );
+     * System.out.println(
+     * "| Nombre     | Apellido   | Capitán  | Subcapitán| Comodín| Fotocopia DNI | Fotocopia prepaga | Apto médico  |    Equipo     "
+     * );
+     * System.out.println(
+     * "+------------+------------+----------+-----------+--------+---------------+-------------------+--------------+---------------"
+     * );
+     * 
+     * for (Equipo equipo : e) {
+     * 
+     * for (Jugador jugador : equipo.jugadores) {
+     * System.out.
+     * printf("| %-10s | %-10s | %-8s | %-12s | %-8s | %-9s | %-6s | %-13s | %-13s |\n"
+     * ,
+     * jugador.nombre, jugador.apellido,
+     * jugador.capitan ? "Sí" : "No", jugador.subcapitan ? "Sí" : "No",
+     * jugador.comodin ? "Sí" : "No",
+     * jugador.fotocopia_dni ? "Sí" : "No", jugador.fotocopia_prepaga ? "Sí" : "No",
+     * jugador.apto_medico ? "Sí" : "No",
+     * equipo.nombre);
+     * }
+     * 
+     * System.out.println(
+     * "+------------+------------+------+--------------+----------+-----------+-------+---------------+------------------+--------------+"
+     * );
+     * }
+     * }
+     */
+
+    public void muestraJugadores(Equipo[] e) {
+        System.out.println("Jugadores cargados: ");
+
+        // Encabezado de la grilla
+        System.out.println(
+                "+------------+------------+----------+-----------+--------+---------------+-------------------+--------------+---------------+");
+        System.out.println(
+                "| Nombre     | Apellido   | Capitán  | Subcapitán| Comodín| Fotocopia DNI | Fotocopia prepaga | Apto médico  |    Equipo     ");
+        System.out.println(
+                "+------------+------------+----------+-----------+--------+---------------+-------------------+--------------+---------------");
+
+        for (Equipo equipo : e) {
+            for (Jugador jugador : equipo.jugadores) {
+                System.out.printf("| %-10s | %-10s | %-8s | %-10s | %-7s | %-13s | %-18s | %-12s | %-13s |\n",
+                        jugador.nombre, jugador.apellido,
+                        jugador.capitan ? "Sí" : "No", jugador.subcapitan ? "Sí" : "No",
+                        jugador.comodin ? "Sí" : "No",
+                        jugador.fotocopia_dni ? "Sí" : "No", jugador.fotocopia_prepaga ? "Sí" : "No",
+                        jugador.apto_medico ? "Sí" : "No",
+                        equipo.nombre);
+            }
+
+            System.out.println(
+                    "+------------+------------+-------+--------------+--------+---------------+-------------------+--------------+---------------");
+        }
+    }
+
 }
