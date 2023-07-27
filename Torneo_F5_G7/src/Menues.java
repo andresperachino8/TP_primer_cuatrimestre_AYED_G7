@@ -1,10 +1,12 @@
 public class Menues {
-    //public static String menu_general = "Bienvenido al Torneo de Fútbol 5 \n" + "\n" + "Menú de opciones: \n" + "\n"
-            //+ "Seleccione una opción: " + "\n" + "1. Carga de Equipos. \n" + "2. Carga de Jugadores. \n"
-           // + "3. Listar Equipos. \n" + "4. Listar Jugadores. \n"
-           // + "5. Simular resultados. \n" + "\n" + "6. Salir";
+    // public static String menu_general = "Bienvenido al Torneo de Fútbol 5 \n" +
+    // "\n" + "Menú de opciones: \n" + "\n"
+    // + "Seleccione una opción: " + "\n" + "1. Carga de Equipos. \n" + "2. Carga de
+    // Jugadores. \n"
+    // + "3. Listar Equipos. \n" + "4. Listar Jugadores. \n"
+    // + "5. Simular resultados. \n" + "\n" + "6. Salir";
     public static String menu_general = "Bienvenido al Torneo de Fútbol 5 \n" + "\n" + "Menú de opciones: \n" + "\n"
-            + "Seleccione una opción: " + "\n" + "1. Carga de Equipos. \n" 
+            + "Seleccione una opción: " + "\n" + "1. Carga de Equipos y Jugadores. \n"
             + "2. Listar Equipos. \n" + "3. Listar Jugadores. \n"
             + "4. Simular resultados. \n" + "\n" + "5. Salir";
 

@@ -36,7 +36,7 @@ public class Torneo_F5 {
                     break;
                 case 4:
                     // r.simulaResultados(e.equipos, j.jugadores);
-                    r.simulaResultados(e.equipos, e.jugadores);
+                    r.simulaResultados(e.equipos);
                     break;
                 // case 6:
                 case 5:

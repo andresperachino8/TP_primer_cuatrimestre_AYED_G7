@@ -5,18 +5,18 @@ public class Resultados {
     String subcampeon;
     String jugador_goleador;
 
-    public void simulaResultados(Equipo[] e, Jugador[] j) {
-
+    public void simulaResultados(Equipo[] e) {
         // Generar un índice aleatorio
         Random random = new Random();
         int indiceEquipoAleatorio = random.nextInt(e.length);
         int indiceEquipoAleatorio1 = random.nextInt(e.length);
-        int indiceJugadorAleatorio = random.nextInt(j.length);
+        int indiceJugadorAleatorio = random.nextInt(e[indiceEquipoAleatorio].cant_jugadores);
 
         // Acceder al elemento aleatorio en el array
         Equipo equipoCampeon = e[indiceEquipoAleatorio];
         Equipo equipoSubcampeon = e[indiceEquipoAleatorio1];
-        Jugador jugadorGoleador = j[indiceJugadorAleatorio];
+
+        Jugador jugadorGoleador = e[indiceEquipoAleatorio].jugadores[indiceJugadorAleatorio];
 
         // Imprimir el elemento aleatorio
         System.out.println("Equipo campeón: " + equipoCampeon.nombre);
