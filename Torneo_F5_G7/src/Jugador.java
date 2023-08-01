@@ -69,14 +69,14 @@ public class Jugador {
 
         System.out.println("El jugador ingresado es capitán de su equipo? (S/N) ");
         String c = sc.nextLine();
-        while (!c.equals("S") && !c.equals("N")) {
+        while (!c.equals("S") && !c.equals("N") && !c.equals("n") && !c.equals("s")) {
             System.out.println("¡DATO INCORRECTO!");
             System.out.println("El jugador ingresado es capitán de su equipo? (S/N) ");
             c = sc.nextLine();
         }
-        if (c.equals("S")) {
+        if (c.equals("S") && c.equals("s")) {
             capitan = true;
-        } else if (c.equals("N")) {
+        } else if (c.equals("N") && c.equals("n")) {
             capitan = false;
         }
 
@@ -86,67 +86,70 @@ public class Jugador {
         } else if (capitan == false) {
             System.out.println("El jugador ingresado es subcapitán de su equipo? (S/N) ");
             String s = sc.nextLine();
-            while (!s.equals("S") && !s.equals("N")) {
+            while (!s.equals("S") && !s.equals("N") && !s.equals("n") && !s.equals("s")) {
                 System.out.println("¡DATO INCORRECTO!");
                 System.out.println("El jugador ingresado es subcapitán de su equipo? (S/N) ");
                 s = sc.nextLine();
             }
-            if (s.equals("S")) {
+            if (s.equals("S") && s.equals("s")) {
                 subcapitan = true;
-            } else if (s.equals("S")) {
+            } else if (s.equals("N") && s.equals("n")) {
                 subcapitan = false;
             }
         }
 
-        System.out.println("El jugador ingresado es comodín de su equipo? (S/N) ");
-        String co = sc.nextLine();
-        while (!co.equals("S") && !co.equals("N")) {
-            System.out.println("¡DATO INCORRECTO!");
+        Equipo equi = new Equipo();
+        while (equi.cant_comodines != 0) {
             System.out.println("El jugador ingresado es comodín de su equipo? (S/N) ");
-            co = sc.nextLine();
-        }
-        if (co.equals("S")) {
-            comodin = true;
-        } else if (co.equals("N")) {
-            comodin = false;
+            String co = sc.nextLine();
+            while (!co.equals("S") && !co.equals("N") && !co.equals("n") && !co.equals("s")) {
+                System.out.println("¡DATO INCORRECTO!");
+                System.out.println("El jugador ingresado es comodín de su equipo? (S/N) ");
+                co = sc.nextLine();
+            }
+            if (co.equals("S") && co.equals("s")) {
+                comodin = true;
+            } else if (co.equals("N") && co.equals("n")) {
+                comodin = false;
+            }
         }
 
         System.out.println("El jugador ingresado entregó la fotocopia del DNI? (S/N) ");
         String f = sc.nextLine();
-        while (!f.equals("S") && !f.equals("N")) {
+        while (!f.equals("S") && !f.equals("N") && !f.equals("s") && !f.equals("n")) {
             System.out.println("¡DATO INCORRECTO!");
             System.out.println("El jugador ingresado entregó la fotocopia del DNI? (S/N) ");
             f = sc.nextLine();
         }
-        if (f.equals("S")) {
+        if (f.equals("S") && f.equals("s")) {
             fotocopia_dni = true;
-        } else if (f.equals("N")) {
+        } else if (f.equals("N") && f.equals("n")) {
             fotocopia_dni = false;
         }
 
         System.out.println("El jugador ingresado entregó la fotocopia de la prepaga? (S/N) ");
         String p = sc.nextLine();
-        while (!p.equals("S") && !p.equals("N")) {
+        while (!p.equals("S") && !p.equals("N") && !p.equals("s") && !p.equals("n")) {
             System.out.println("¡DATO INCORRECTO!");
             System.out.println("El jugador ingresado entregó la fotocopia de la prepaga? (S/N) ");
             p = sc.nextLine();
         }
-        if (p.equals("S")) {
+        if (p.equals("S") && p.equals("s")) {
             fotocopia_prepaga = true;
-        } else if (p.equals("N")) {
+        } else if (p.equals("N") && p.equals("n")) {
             fotocopia_prepaga = false;
         }
 
         System.out.println("El jugador ingresado posee apto médico? (S/N) ");
         String a = sc.nextLine();
-        while (!a.equals("S") && !a.equals("N")) {
+        while (!a.equals("S") && !a.equals("N") && !a.equals("s") && !a.equals("n")) {
             System.out.println("¡DATO INCORRECTO!");
             System.out.println("El jugador ingresado posee apto médico? (S/N) ");
             a = sc.nextLine();
         }
-        if (a.equals("S")) {
+        if (a.equals("S") && a.equals("s")) {
             apto_medico = true;
-        } else if (a.equals("N")) {
+        } else if (a.equals("N") && a.equals("n")) {
             apto_medico = false;
         }
 

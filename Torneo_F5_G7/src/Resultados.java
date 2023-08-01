@@ -9,7 +9,12 @@ public class Resultados {
         // Generar un índice aleatorio
         Random random = new Random();
         int indiceEquipoAleatorio = random.nextInt(e.length);
-        int indiceEquipoAleatorio1 = random.nextInt(e.length);
+        int indiceEquipoAleatorio1;
+
+        do {
+            indiceEquipoAleatorio1 = random.nextInt(e.length);
+        } while (indiceEquipoAleatorio1 == indiceEquipoAleatorio);
+
         int indiceJugadorAleatorio = random.nextInt(e[indiceEquipoAleatorio].cant_jugadores);
 
         // Acceder al elemento aleatorio en el array
