@@ -1,16 +1,12 @@
 import java.util.Random;
 
 public class Resultados {
-    String campeon;
-    String subcampeon;
-    String jugador_goleador;
 
     public void simulaResultados(Equipo[] e) {
         // Generar un índice aleatorio
         Random random = new Random();
         int indiceEquipoAleatorio = random.nextInt(e.length);
         int indiceEquipoAleatorio1;
-
         do {
             indiceEquipoAleatorio1 = random.nextInt(e.length);
         } while (indiceEquipoAleatorio1 == indiceEquipoAleatorio);

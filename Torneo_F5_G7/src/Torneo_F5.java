@@ -2,8 +2,6 @@ import java.util.Scanner;
 
 public class Torneo_F5 {
 
-    static int contador = 0;
-
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
 
@@ -18,7 +16,6 @@ public class Torneo_F5 {
 
         // while (opcion != 6) {
         while (opcion != 5) {
-
             switch (opcion) {
                 case 1:
                     e.altaEquipo();
