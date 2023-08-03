@@ -83,7 +83,7 @@ public class Equipo {
             System.out.println("\n" +
                     "INGRESE LOS " + cant_jugadores + " JUGADORES DEL EQUIPO ");
             for (int i = 0; i < cant_jugadores; i++) {
-                System.out.println("Jugador " + (i + 1) + "/" + cant_jugadores);
+                System.out.println("Jugador [" + (i + 1) + "/" + cant_jugadores + "]");
                 ne.jugadores[i] = j.altaJugador(i, cant_jugadores);
             }
 
